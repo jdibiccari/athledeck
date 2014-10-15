@@ -4,7 +4,7 @@
 <div class="wrapper">
   <ul>
   {% for athlete in athletes %}
-    <li>{{athlete}}</li>
+    <li><a href="{% url 'athledeck.views.show' pk=athlete.pk %}">{{athlete}}</a></li>
       <ul>
         <li>{{athlete.sport}}</li>
         <li>{{athlete.league}}</li>
