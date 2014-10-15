@@ -1,15 +1,17 @@
 {% extends 'athletes/base.html' %}
 
 {% block content %}
-<ul>
-{% for athlete in athletes %}
-  <li>{{athlete}}</li>
-    <ul>
-      <li>{{athlete.sport}}</li>
-      <li>{{athlete.league}}</li>
-      <li>{{athlete.team}}</li>
-    </ul>
-{% endfor %}
-</ul>
+<div class="wrapper">
+  <ul>
+  {% for athlete in athletes %}
+    <li>{{athlete}}</li>
+      <ul>
+        <li>{{athlete.sport}}</li>
+        <li>{{athlete.league}}</li>
+        <li>{{athlete.team}}</li>
+      </ul>
+  {% endfor %}
+  </ul>
+</div>
 {% endblock %}
 
