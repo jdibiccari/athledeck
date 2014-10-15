@@ -1,0 +1,19 @@
+{% load staticfiles %}
+
+<html><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Athledeck</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+   </head>
+  <body>
+    <div class="page-header">
+      <h1>Athledeck</h1>
+    </div>
+    <div>
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

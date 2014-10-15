@@ -1,5 +1,12 @@
-<h1>ATHLETES</h1>
+{% extends 'athletes/base.html' %}
 
+<ul>
 {% for athlete in athletes %}
-  {{athlete}}
+  <li>{{athlete}}</li>
+    <ul>
+      <li>{{athlete.sport}}</li>
+      <li>{{athlete.league}}</li>
+      <li>{{athlete.team}}</li>
+    </ul>
 {% endfor %}
+</ul>
