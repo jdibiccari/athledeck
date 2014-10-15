@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from . models import Athlete
 
-# Create your views here.
+def index(request):
+  athletes = Athlete.objects.all()
+  return render(request, 'athletes/index.html', {'athletes': athletes})
