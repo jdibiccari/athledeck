@@ -1,7 +1,7 @@
 {% extends 'athletes/base.html' %}
 
 {% block content %}
-<div class="wrapper">
+<div class="form-wrapper vertical-align">
   <form method="POST" class="form" role="form">{% csrf_token %}
     <div class="form-group">
     {{form}}
