@@ -1,3 +1,7 @@
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 1.5em;
@@ -30,9 +34,16 @@ form label {
   width: 91.5%;
 }
 
-.athlete-container {
-  display: block;
+.athlete-header {
+  background-color: #222;
+  color: white;
+  height: 40px;
   padding: 1%;
+  margin-bottom: 1%;
+}
+
+.athlete-container {
+  margin-bottom: 2%;
 }
 
 .detail-menu {
