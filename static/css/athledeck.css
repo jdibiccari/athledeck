@@ -11,6 +11,14 @@ body {
   background-size: 100%;
 }
 
+.vertical-align {
+  position: relative;
+  top: 30%;
+  -webkit-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  transform: translateY(-30%);
+}
+
 form label {
   visibility: hidden;
   height: 2px;
