@@ -5,7 +5,7 @@ from .models import Athlete
 from .forms import AthleteForm
 
 def index(request):
-  athletes = Athlete.objects.all()
+  athletes = Athlete.objects.order_by('last_name')
   return render(request, 'athletes/index.html', {'athletes': athletes})
 
 def show(request, pk):
@@ -32,3 +32,9 @@ def edit(request, pk):
   else:
     form = AthleteForm(instance=athlete)
   return render(request, 'athletes/edit.html', {'form': form})
+
+def destroy(request, pk):
+  athlete = get_object_or_404(Athlete, pk=pk)
+  athlete.delete()
+  return redirect('athledeck.views.index')
+
