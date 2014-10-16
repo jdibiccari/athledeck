@@ -30,7 +30,7 @@ form label {
 
 .form-wrapper {
   margin: 0 auto;
-  background: #f2f2f2;
+  background: white;
   padding: 1%;
   width: 45%;
 }
@@ -38,8 +38,13 @@ form label {
 .wrapper {
   margin: 0 auto;
   background: white;
-  padding: 1%;
-  width: 91.5%;
+  padding: 2%;
+  width: 80%;
+}
+
+.media img{
+  border-radius: 50%;
+  border: solid 1px black;
 }
 
 .athlete-header {

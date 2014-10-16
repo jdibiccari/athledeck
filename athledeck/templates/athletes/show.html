@@ -4,9 +4,15 @@
   <div class="wrapper vertical-align">
     <h2>{{athlete}}</h2>
     <div class="detail-menu">
-      <a href="{% url 'athlete_edit' pk=athlete.pk %}"><span class="glyphicon glyphicon-pencil">Edit</span></a>
-      <a href="{% url 'athlete_destroy' pk=athlete.pk %}"><span class="glyphicon glyphicon-trash">Destroy</span></a>
+      <a href="{% url 'athlete_edit' pk=athlete.pk %}"><span class="glyphicon glyphicon-pencil"> Edit</span></a>
+      <a href="{% url 'athlete_destroy' pk=athlete.pk %}"><span class="glyphicon glyphicon-trash"> Destroy</span></a>
     </div>
-    <p>{{athlete.bio}}</p>
+    <div class="media">
+      <div class="avatar pull-right"><img src="{{athlete.image}}"></div>
+      <div class="bio media-body">
+        <h3 class="media-heading">Bio</h3>
+        {{athlete.bio}}
+      </div>
+    </div>
   </div>
 {% endblock %}
