@@ -5,11 +5,13 @@
   <ul>
   {% for athlete in athletes %}
     <li><a href="{% url 'athledeck.views.show' pk=athlete.pk %}">{{athlete}}</a></li>
+    <div class="details">
       <ul>
-        <li>{{athlete.sport}}</li>
-        <li>{{athlete.league}}</li>
-        <li>{{athlete.team}}</li>
+        <li><strong>Sport:</strong> {{athlete.sport}}</li>
+        <li><strong>League:</strong> {{athlete.league}}</li>
+        <li><strong>Team:</strong> {{athlete.team}}</li>
       </ul>
+    </div>
   {% endfor %}
   </ul>
 </div>
