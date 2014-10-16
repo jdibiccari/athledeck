@@ -1,3 +1,5 @@
+from django.core.urlresolvers import reverse
+from django.shortcuts import redirect
 from django.shortcuts import get_object_or_404, render
 from .models import Athlete
 from .forms import AthleteForm
@@ -11,5 +13,22 @@ def show(request, pk):
   return render(request, 'athletes/show.html', {'athlete': athlete})
 
 def new(request):
-  form = AthleteForm()
-  return render(request, 'atheletes/edit.html', {'form': form})
+  if request.method == "POST":
+    form = AthleteForm(request.POST)
+    if form.is_valid():
+      athlete = form.save()
+      return redirect('athledeck.views.show', pk=athlete.pk)
+  else:
+    form = AthleteForm()
+  return render(request, 'athletes/edit.html', {'form': form})
+
+def edit(request, pk):
+  athlete = get_object_or_404(Athlete, pk=pk)
+  if request.method == "POST":
+    form = AthleteForm(request.POST, instance=athlete)
+    if form.is_valid():
+      athlete =form.save()
+      return redirect('athledeck.views.show', pk=athlete.pk)
+  else:
+    form = AthleteForm(instance=athlete)
+  return render(request, 'athletes/edit.html', {'form': form})
