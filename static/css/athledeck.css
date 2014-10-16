@@ -1,11 +1,11 @@
-.page-header {
-  padding: 0.5% 2%;
-  background-color: black;
-  color: white;
+form label {
+  visibility: hidden;
+  height: 2px;
 }
 
 .wrapper {
   border: solid 1px black;
+  border-radius: 2%;
   padding: 2%;
   margin: 0 auto;
   width: 40%;
