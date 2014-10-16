@@ -47,6 +47,10 @@ form label {
   border: solid 1px black;
 }
 
+.tags {
+  color: grey;
+}
+
 .athlete-header {
   background-color: #222;
   color: white;

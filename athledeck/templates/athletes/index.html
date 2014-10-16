@@ -7,18 +7,28 @@
   {% for athlete in athletes %}
     <div class="athlete-container">
       <div class="athlete-header"><a href="{% url 'athledeck.views.show' pk=athlete.pk %}">{{athlete}}</a></div>
-      <div class="details">
-        <ul>
-          <li><strong>Sport:</strong> {{athlete.sport}}</li>
-          <li><strong>League:</strong> {{athlete.league}}</li>
-          <li><strong>Team:</strong> {{athlete.team}}</li>
-        </ul>
-      </div>
     </div>
   {% endfor %}
 {% else %}
   <strong>Sorry!</strong> There are no athletes to display.
 {% endif %}
+
+<!-- Pagination -->
+<div class="pagination">
+    <span class="step-links">
+        {% if athletes.has_previous %}
+            <a href="?page={{ athletes.previous_page_number }}"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ athletes.number }} of {{ athletes.paginator.num_pages }}.
+        </span>
+
+        {% if athletes.has_next %}
+            <a href="?page={{ athletes.next_page_number }}"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        {% endif %}
+    </span>
+</div>
 </div>
 
 {% endblock %}
