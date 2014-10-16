@@ -1,7 +1,7 @@
 {% extends 'athletes/base.html' %}
 
 {% block content %}
-<div class="wrapper">
+<div class="col-md-8">
   <ul>
   {% for athlete in athletes %}
     <li><a href="{% url 'athledeck.views.show' pk=athlete.pk %}">{{athlete}}</a></li>

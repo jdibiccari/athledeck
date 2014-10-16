@@ -1,10 +1,20 @@
 .page-header {
   padding: 0.5% 2%;
+  background-color: black;
+  color: white;
 }
 
 .wrapper {
-  border: solid;
+  border: solid 1px black;
   padding: 2%;
   margin: 0 auto;
   width: 40%;
+}
+
+.detail-menu {
+  margin: 1% 0;
+}
+
+.detail-menu a {
+  padding: 2%;
 }
