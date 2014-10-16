@@ -9,6 +9,7 @@
       <div class="athlete-header"><a href="{% url 'athledeck.views.show' pk=athlete.pk %}">{{athlete}}</a></div>
       <div class="details">
         <ul>
+          <li><strong>Sport:</strong> {{athlete.image}}</li>
           <li><strong>Sport:</strong> {{athlete.sport}}</li>
           <li><strong>League:</strong> {{athlete.league}}</li>
           <li><strong>Team:</strong> {{athlete.team}}</li>
