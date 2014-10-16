@@ -1,19 +1,20 @@
 {% extends 'athletes/base.html' %}
 
 {% block content %}
-<div class="col-md-8">
-  <ul>
+<div class="wrapper">
+
   {% for athlete in athletes %}
-    <li><a href="{% url 'athledeck.views.show' pk=athlete.pk %}">{{athlete}}</a></li>
-    <div class="details">
-      <ul>
-        <li><strong>Sport:</strong> {{athlete.sport}}</li>
-        <li><strong>League:</strong> {{athlete.league}}</li>
-        <li><strong>Team:</strong> {{athlete.team}}</li>
-      </ul>
+    <div class="athlete-container">
+      <a href="{% url 'athledeck.views.show' pk=athlete.pk %}">{{athlete}}</a>
+      <div class="details">
+        <ul>
+          <li><strong>Sport:</strong> {{athlete.sport}}</li>
+          <li><strong>League:</strong> {{athlete.league}}</li>
+          <li><strong>Team:</strong> {{athlete.team}}</li>
+        </ul>
+      </div>
     </div>
   {% endfor %}
-  </ul>
 </div>
 {% endblock %}
 
