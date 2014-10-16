@@ -1,7 +1,7 @@
 {% extends 'athletes/base.html' %}
 
 {% block content %}
-  <div class="wrapper">
+  <div class="wrapper vertical-align">
     <h2>{{athlete}}</h2>
     <div class="detail-menu">
       <a href="{% url 'athlete_edit' pk=athlete.pk %}"><span class="glyphicon glyphicon-pencil">Edit</span></a>
