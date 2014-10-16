@@ -7,13 +7,20 @@
     <title>Athledeck</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/athledeck.css' %}">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/athledeck.js' %}">
    </head>
   <body>
-    <div class="page-header">
-      <h1>Athledeck</h1>
-      <a href="{% url 'athledeck.views.new' %}"><span class="glyphicon glyphicon-plus"> Add</span></a>
-      <a href="{% url 'athledeck.views.index' %}"><span class="glyphicon glyphicon-home"> Home</span></a>
-    </div>
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+      <a href="{% url 'athledeck.views.index' %}" class="navbar-brand">Athledeck</a>
+      </div>
+      <ul class="nav navbar-nav">
+      <li><a href="{% url 'athledeck.views.new' %}"><span class="glyphicon glyphicon-plus"> Add</span></a></li>
+      <li class="active"><a href="{% url 'athledeck.views.index' %}"><span class="glyphicon glyphicon-home"> Home</span></a></li>
+      </ul>
+    </nav>
+
     <div>
       {% block content %}
       {% endblock %}
