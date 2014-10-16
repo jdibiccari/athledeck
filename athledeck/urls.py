@@ -6,4 +6,6 @@ urlpatterns = patterns('',
     url(r'^athlete/(?P<pk>[0-9]+)/$', views.show),
     url(r'^athlete/new/$', views.new, name='athlete_new'),
     url(r'^athlete/(?P<pk>[0-9]+)/edit/$', views.edit, name='athlete_edit'),
+    url(r'^athlete/(?P<pk>[0-9]+)/destroy/$', views.destroy, name='athlete_destroy'),
+    
 )
