@@ -3,6 +3,7 @@
 {% block content %}
 <div class="wrapper vertical-align">
 
+{%if athletes %}
   {% for athlete in athletes %}
     <div class="athlete-container">
       <div class="athlete-header"><a href="{% url 'athledeck.views.show' pk=athlete.pk %}">{{athlete}}</a></div>
@@ -15,6 +16,10 @@
       </div>
     </div>
   {% endfor %}
+{% else %}
+  <strong>Sorry!</strong> There are no athletes to display.
+{% endif %}
 </div>
+
 {% endblock %}
 

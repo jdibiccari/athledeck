@@ -27,9 +27,17 @@ form label {
   visibility: hidden;
   height: 2px;
 }
-.wrapper {
+
+.form-wrapper {
   margin: 0 auto;
   background: #f2f2f2;
+  padding: 1%;
+  width: 45%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  background: white;
   padding: 1%;
   width: 91.5%;
 }
@@ -44,6 +52,7 @@ form label {
 
 .athlete-container {
   margin-bottom: 2%;
+  border-bottom: solid 1px grey;
 }
 
 .detail-menu {
