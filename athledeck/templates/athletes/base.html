@@ -5,6 +5,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Athledeck</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/athledeck.css' %}">
      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -17,8 +18,8 @@
       <a href="{% url 'athledeck.views.index' %}" class="navbar-brand">Athledeck</a>
       </div>
       <ul class="nav navbar-nav">
-      <li><a href="{% url 'athledeck.views.new' %}"><span class="glyphicon glyphicon-plus"> Add</span></a></li>
-      <li class="active"><a href="{% url 'athledeck.views.index' %}"><span class="glyphicon glyphicon-home"> Home</span></a></li>
+        <li><a href="{% url 'athledeck.views.new' %}"><span class="glyphicon glyphicon-plus"> Add</span></a></li>
+        <li class="active"><a href="{% url 'athledeck.views.index' %}"><span class="glyphicon glyphicon-home"> Home</span></a></li>
       </ul>
     </nav>
 
