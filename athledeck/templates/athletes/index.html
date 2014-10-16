@@ -5,7 +5,7 @@
 
   {% for athlete in athletes %}
     <div class="athlete-container">
-      <a href="{% url 'athledeck.views.show' pk=athlete.pk %}">{{athlete}}</a>
+      <div class="athlete-header"><a href="{% url 'athledeck.views.show' pk=athlete.pk %}">{{athlete}}</a></div>
       <div class="details">
         <ul>
           <li><strong>Sport:</strong> {{athlete.sport}}</li>
