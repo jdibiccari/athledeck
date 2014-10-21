@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="form-wrapper vertical-align">
-  <form method="POST" class="form" role="form">{% csrf_token %}
+  <form method="POST" class="form" role="form" enctype="multipart/form-data">{% csrf_token %}
     <div class="form-group">
     {{form}}
   </div>

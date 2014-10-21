@@ -34,6 +34,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
     'athledeck',
 )
 
@@ -101,3 +102,11 @@ except ImportError:
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+AWS_S3_SECURE_URLS = False       # use http instead of https
+AWS_QUERYSTRING_AUTH = False     # don't add complex authentication-related query parameters for requests
+AWS_S3_ACCESS_KEY_ID = 'AKIAIK6Y6D4DP42EIMZQ'     # enter your access key id
+AWS_S3_SECRET_ACCESS_KEY = 'zaUJrWJuQJaJ816exZRU2dVcxduJ+GjUyogzc2LW' # enter your secret access key
+AWS_STORAGE_BUCKET_NAME = 'athledeck.media'

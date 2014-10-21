@@ -27,7 +27,7 @@ def show(request, pk):
 
 def new(request):
   if request.method == "POST":
-    form = AthleteForm(request.POST)
+    form = AthleteForm(request.POST, request.FILES)
     if form.is_valid():
       athlete = form.save()
       return redirect('athledeck.views.show', pk=athlete.pk)
@@ -38,7 +38,7 @@ def new(request):
 def edit(request, pk):
   athlete = get_object_or_404(Athlete, pk=pk)
   if request.method == "POST":
-    form = AthleteForm(request.POST, instance=athlete)
+    form = AthleteForm(request.POST, request.FILES, instance=athlete)
     if form.is_valid():
       athlete =form.save()
       return redirect('athledeck.views.show', pk=athlete.pk)

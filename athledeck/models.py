@@ -7,7 +7,7 @@ class Athlete(models.Model):
   sport = models.CharField(max_length = 140)
   league = models.CharField(max_length = 140)
   team = models.CharField(max_length = 140)
-  image = models.ImageField(upload_to='images/', default='/static/images/no-image.png')
+  image = models.ImageField(upload_to='images/%Y%m%d', default='/static/images/no-image.png')
 
   def __str__(self):
     return "%s %s" % (str(self.first_name), str(self.last_name))
