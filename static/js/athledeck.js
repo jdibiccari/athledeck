@@ -8,5 +8,9 @@ function highlight() {
 $(document).ready(function() {
 
   highlight();
+
+  $('.flip').on('click', function(){
+    $('.card').toggleClass('flipped');
+  });
   
 });
