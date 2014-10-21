@@ -74,7 +74,10 @@ form label {
 
 .avatar img {
   border-radius: 5px;
+<<<<<<< HEAD
   border: solid 1px grey;
+=======
+>>>>>>> 116c7383b8144c501956fdc5ffa05c5d19e672a4
 }
 
 .bio {
