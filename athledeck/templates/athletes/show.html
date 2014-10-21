@@ -3,11 +3,13 @@
 {% block content %}
 
     <div class="flip"> 
-        <div class="card"> 
-            <div class="face front"> 
-                <h2>{{athlete}}</h2>
-                <h5>{{athlete.sport}} | {{athlete.league}} | {{athlete.team}}</h5>
+        <div class="card">
+            <div class="face front">
+                <div class="ribbon-wrapper-green"><div class="ribbon-green">{{athlete.sport}}</div></div> 
+                
                 <div class="avatar"><img src="{{athlete.image}}" width="300px"></div>
+                <div class="banner"><h2>{{athlete}}</h2></div>
+                <h5>{{athlete.league}} | {{athlete.team}}</h5>
             </div> 
             <div class="face back"> 
                 <div class="bio vertical-align">{{athlete.bio}}</div>
